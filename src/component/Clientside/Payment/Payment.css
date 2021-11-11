@@ -1,0 +1,11 @@
+.payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    font-size: 57px;
+    font-family: initial;
+    letter-spacing: 7px;
+    color: #f13d07;
+    font-weight: bolder;
+}

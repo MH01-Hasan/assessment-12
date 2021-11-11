@@ -15,17 +15,22 @@ import Regester from './component/Login/Regester/Regester';
 import PrivateRoute from './component/Login/PrivateRoute/PrivateRoute';
 import WatchProduct from './component/WatchProduct/WatchProduct';
 import Details from './component/Details/Details';
+import Banner from './component/Banner/Banner';
+import Home from './component/Home/Home';
 
 function App() {
   return (
     <div>
       <AuthProvider>
        <Router>
-         <Header></Header>
+         <Header/>
         <Switch>
-        <Route path="/watchProduct">
-        <WatchProduct/>
-          </Route>
+        <Route exact path="/">
+        <Home></Home>
+        </Route>
+        <Route path="/home">
+        <Home></Home>
+        </Route>
         <Route path="/explore">
          <Explore></Explore>
           </Route>

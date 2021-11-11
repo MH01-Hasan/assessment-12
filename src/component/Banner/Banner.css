@@ -1,0 +1,37 @@
+.bannaer{
+    margin-top: 1px;
+  
+}
+
+.image{
+    height: 635px;
+}
+
+.caption{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+   
+}
+
+.arivel{
+    color: #3df111;
+    font-family: fangsong;
+    letter-spacing: 15px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.best{
+    color: #ffffff;
+    font-family: serif;
+    font-size: 56px;
+    letter-spacing: 14px;
+    text-align: initial;
+    font-weight: bolder;
+    margin: 20px 0px;
+ 
+    
+    
+
+}

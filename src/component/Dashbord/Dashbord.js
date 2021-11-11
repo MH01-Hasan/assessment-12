@@ -18,28 +18,28 @@ const Dashbord = () => {
         
             };
     return (
-        <div >
-            <h4>Dashbord</h4>
-            <div className='row container'>
-                <div className='col-lg-3 col-sm-12 dashbord-list'>
-                <Link style={style} to={`${url}/allorder`}>
-                <li className="dashboard-menu mt-5 ">All Order</li>
-              </Link>
+        <div className='dashbord-fild ' >
+            
+            <div className='row '>
+                <div className='col-lg-2 col-sm-12 dashbord-list'>
+                      <Link style={style} to={`${url}/allorder`}>
+                      <li className="dashboard-menu mt-5 ">All Order</li>
+                    </Link>
 
-                <Link style={style} to={`${url}/myOrder`}>
-                <li className="dashboard-menu mt-5 "> MY-order</li>
-              </Link>
+                      <Link style={style} to={`${url}/myOrder`}>
+                      <li className="dashboard-menu  "> MY-order</li>
+                    </Link>
 
-              <Link style={style} to={`${url}/review`}>
-                <li className="dashboard-menu ">Review</li>
-              </Link>
-              <Link style={style} to={`${url}/payment`}>
-              <li className="dashboard-menu "> Payment</li>
-              </Link>
-              <Link style={style} to={`${url}/addproduct`}>
-              <li className="dashboard-menu "> Add Product</li>
-              </Link>
-              <li className="dashboard-menu "> <button className='log-out-btn' onClick ={logout}> <i class="fas fa-sign-out-alt"></i>log-Out</button></li>
+                    <Link style={style} to={`${url}/review`}>
+                      <li className="dashboard-menu ">Review</li>
+                    </Link>
+                    <Link style={style} to={`${url}/payment`}>
+                    <li className="dashboard-menu "> Payment</li>
+                    </Link>
+                    <Link style={style} to={`${url}/addproduct`}>
+                    <li className="dashboard-menu "> Add Product</li>
+                    </Link>
+                    <li className="dashboard-menu "> <button className='log-out-btn' onClick ={logout}> <i class="fas fa-sign-out-alt"></i>log-Out</button></li>
 
              
 
@@ -49,7 +49,7 @@ const Dashbord = () => {
 
 
 
-                <div className='col-lg-9 col-sm-12'>
+                <div className='col-lg-10 col-sm-12'>
                 <Switch>
               <Route exact path={`${path}/allorder`}>
                 <Allorder></Allorder>

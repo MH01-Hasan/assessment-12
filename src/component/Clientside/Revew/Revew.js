@@ -24,11 +24,11 @@ const Revew = () => {
     };
     return (
         <div className='container mt-5'>
-        <h4 className='reviw'>Please Your Reviw</h4>
+        <h3 className='reviw'>Please Your Review</h3>
 
             <div className='comment-fild'>
             <form className='from-fild' onSubmit={handleSubmit(onSubmit)}>
-            <input {...register("Name")} />
+            
             <br />
             <textarea className='comment' {...register("comment")} placeholder='Your Comment Our Web-site' />
             <br />

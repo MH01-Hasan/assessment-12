@@ -15,7 +15,7 @@ const WatchProduct = () => {
 
 
     return (
-       <div className='container'>
+       <div className='mx-3'>
             <div className='row'>
             {
                 watchs.slice(0,6).map (watch => <WatchData watch={watch}

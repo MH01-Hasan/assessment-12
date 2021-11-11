@@ -1,10 +1,16 @@
 .dashbord-list{
-    border-right: 1px solid gray;
-    border-top: 1px solid gray;
-    height: 500px;
+    border-right: 1px solid rgb(241, 131, 5);
+    /* border-top: 1px solid gray; */
+    height: 600px;
+    background-color: #066659;
+    padding-left: 5px;
+
+    
 }
 
-
+.dashbord-fild{
+    margin: 5px 27px;
+}
 .dashboard-menu{
 
     list-style: none;
@@ -21,7 +27,7 @@
 
 .log-out-btn{
     border: none;
-    color: #ac09ef;
+    color: #a907eb;
     border-radius: 6px;
-    background-color: #171c24;
+    background-color: #f1f1f1;
 }

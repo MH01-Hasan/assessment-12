@@ -10,10 +10,12 @@
 }
 
 .submit{
-    color: #e909d8;
-    background-color: #1a1918;
+    color: #e101d0;
+    background-color: #1e9ca9;
     font-size: 28px;
+    font-weight: 700;
     border-radius: 10px;
+    font-family: ui-monospace;
 }
 
 .comment-fild{

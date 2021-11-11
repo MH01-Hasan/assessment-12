@@ -1,0 +1,13 @@
+.manage{
+    color: hsl(300, 97%, 50%);
+    font-size: 33px;
+    font-family: serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.delet-btn{
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 6px 12px;
+}

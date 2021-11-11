@@ -46,7 +46,7 @@ const Regester = () => {
     return (
         <div className='container mt-5 '>
          
-               <div className='fild mt-5'>
+               <div className=' mt-5'>
                    <h3 className='reg-h'> Plese Regester</h3>
            
                 <Form onSubmit={handelloginSubmit} className='regester-fild mt-5 '>

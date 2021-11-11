@@ -1,24 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import UseAuth from '../../../hooks/UseAuth'
+import './Allorder.css'
+import Swal from 'sweetalert2'
 
 const Allorder = () => {
     const {user}= UseAuth()
     const [orders, setOrders] = useState([]);
-    
+
+
+    //All order data Load///
   useEffect(() => {
     fetch('http://localhost:5000/order')
       .then((res) => res.json())
 
       .then((data) => setOrders(data));
   }, [user?.email]);
+//All order data Load///
+
+
+///swite arart ////
+
+const switealart =()=>{
+  Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: ' Delete Successfully',
+    showConfirmButton: false,
+    timer: 2200
+  })
+}
+///swite arart ////
+
+const handeldelet = (id)=>{
+  const prosid =window.confirm('are you sure delete')
+if(prosid){
+  const url = `http://localhost:5000/order/${id}`
+
+fetch(url,{
+  method:'DELETE'
+})
+.then(res =>res.json())
+.then(data =>{
+  if(data.deletedCount>0){
+    switealart()
+    const remainguser = orders.filter(order =>order._id!==id)
+    setOrders( remainguser)
+  }
+})
+}
+}
+
 
     return (
         <div>
+           <h3 className='manage'>Manage All Order</h3>
             <Table striped bordered hover size="sm">
             <thead>
             <tr>
-            <th>#</th>
+            <th>Sl.no</th>
            
             <th>Name</th>
             <th>Email</th>
@@ -32,7 +72,7 @@ const Allorder = () => {
             {orders?.map((order, index) =>  (
                
                
-          <tbody>
+          <tbody key={order._id}>
             <tr>
                 <td>{index + 1}</td>
                
@@ -42,18 +82,15 @@ const Allorder = () => {
                 <td>{order.address}</td>
                 <td>{order.ProductName}</td>
                 <td>{order.price}</td>
-                <td><button  className='btn-button'>delet</button></td>
+                <td><button onClick={()=> handeldelet(order._id)} className='delet-btn'>delet</button></td>
                 
             </tr>
           </tbody>
         )
-        )}
+        )};
             </Table>             
         </div>
     );
 };
 
 export default Allorder;
-//
-// onClick={()=> handeldelet(order._id)}
-//

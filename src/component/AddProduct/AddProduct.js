@@ -31,7 +31,7 @@ const AddProduct = () => {
             <div className='container add '>
             <div className='add-fild'>
               <form onSubmit={handleSubmit(onSubmit)} className='fild'>
-              <h3>Add-New Package</h3>
+              <h3>Add-New Product</h3>
                 <input  type='text'{...register("ProductName")} placeholder="ProductName" required /> 
                 <input  type='text'{...register("img")} placeholder="image-url" required /> 
                 <textarea  type='text'{...register("discription")} placeholder="discription" required /> 

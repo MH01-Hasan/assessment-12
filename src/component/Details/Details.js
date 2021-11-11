@@ -83,20 +83,20 @@ const Details = () => {
                <div className='col-lg-6 col-sm-12 mt-5 mb-5'>
                <form onSubmit={handleSubmit(onSubmit)} className='from-fild'>
                <h5 className='paragraph'> Product Name</h5>
-              <input
+               <input
                 {...register("ProductName", { required: true }  )}
+                readOnly
                 defaultValue={data?.ProductName}
                 className="p-2 m-2 w-100 input-field"
                
              
               />
                <h5 className='paragraph'> Price</h5>
-              <input
+             <input
                 {...register("price" , { required: true })}
+                readOnly
                 defaultValue={data?.price}
                 className="p-2 m-2 w-100 input-field"
-               
-
               />
                <h5 className='paragraph'> Email</h5>
 
