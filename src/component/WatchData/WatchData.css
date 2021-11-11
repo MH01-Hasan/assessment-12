@@ -1,0 +1,26 @@
+.card-fild-image{
+    height: 200px;
+}
+
+
+.card-fild{
+    height: 620px;
+    margin-top: 42px;
+}
+
+.text{
+    color: #040404;
+    text-align: center;
+    font-family: initial;
+    padding: 10px;
+}
+
+
+.bay-btn{
+    background-image: linear-gradient(to right, #ef1313 , #f305e1);
+    border: none;
+    font-family: emoji;
+    font-weight: bolder;
+    font-size: 19px;
+    color: black;
+}

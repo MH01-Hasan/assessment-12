@@ -1,0 +1,35 @@
+.spnir{
+ text-align: center;
+   margin-left: 600px;
+   margin-top: 350px;
+}
+
+
+ 
+
+.regester-fild {
+    background-color: black;
+    width: 420px;
+    margin: auto;
+    padding-top:  60px;
+    border: 1px solid rgb(39, 38, 38);
+    border-radius: 14px;
+}
+
+
+.regester-fild input{
+    font-size: 18px;
+    padding-left: 14px;
+    font-family: monospace;
+    width: 314px;
+   
+}
+
+.reg-h{
+    text-align: center;
+    font-family: monospace;
+}
+
+.pass{
+    color: whitesmoke;
+}

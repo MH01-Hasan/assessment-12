@@ -1,0 +1,27 @@
+.from-fild input{
+    width: 320px;
+    margin-bottom: 8px;
+}
+
+
+.comment{
+    width: 558px;
+    height: 130px;
+}
+
+.submit{
+    color: #e909d8;
+    background-color: #1a1918;
+    font-size: 28px;
+    border-radius: 10px;
+}
+
+.comment-fild{
+  margin: 20px;
+}
+.reviw{
+    text-align: center;
+    font-family: monospace;
+    color: #f909fd;
+    font-weight: bolder;
+}

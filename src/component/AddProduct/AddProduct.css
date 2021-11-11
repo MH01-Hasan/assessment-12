@@ -1,0 +1,27 @@
+.add{
+    width: 100%;
+    margin: auto;
+}
+
+.add-fild input,textarea{
+    width: 380px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+
+      .fild{
+        border: 1px solid gray;
+        border-radius: 10px;
+        background-color: hotpink;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 350px;
+        height: 500px;
+        margin: auto;
+        padding: 0px 10px;
+
+        }

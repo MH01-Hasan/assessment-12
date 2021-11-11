@@ -1,0 +1,27 @@
+.dashbord-list{
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    height: 500px;
+}
+
+
+.dashboard-menu{
+
+    list-style: none;
+    text-align: start;
+    font-size: 25px;
+    margin-bottom: 14px;
+    font-family: serif;
+    color: black;
+}
+
+.dashboard-menu:hover{
+    color: #ac09ef;
+}
+
+.log-out-btn{
+    border: none;
+    color: #ac09ef;
+    border-radius: 6px;
+    background-color: #171c24;
+}
