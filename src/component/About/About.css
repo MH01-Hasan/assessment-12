@@ -6,3 +6,21 @@
     margin-bottom: 15px;
 
 }
+
+.Unique{
+    letter-spacing: 6px;
+    color: #862bcb;
+    font-family: emoji;
+    margin: 12px 0px;
+    font-size: 41px;
+    margin-left: 42px;
+}
+.Lawson{
+    color: #141413;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 35px 40px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    
+}

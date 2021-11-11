@@ -22,7 +22,7 @@ const Dashbord = () => {
             
             <div className='row '>
                 <div className='col-lg-2 col-sm-12 dashbord-list'>
-                      <Link style={style} to={`${url}/allorder`}>
+                      <Link style={style} to={`${url}`}>
                       <li className="dashboard-menu mt-5 ">All Order</li>
                     </Link>
 
@@ -45,19 +45,15 @@ const Dashbord = () => {
 
                 </div>
 
-
-
-
-
                 <div className='col-lg-10 col-sm-12'>
                 <Switch>
-              <Route exact path={`${path}/allorder`}>
+              <Route exact path={`${path}`}>
                 <Allorder></Allorder>
               </Route>
-              <Route exact path={`${path}/myOrder`}>
+              <Route exact  path={`${path}/myOrder`}>
                 <Myorder></Myorder>
               </Route>
-              <Route exact path={`${path}/review`}>
+              <Route  exact path={`${path}/review`}>
                <Revew></Revew>
               </Route>
               <Route exact path={`${path}/payment`}>

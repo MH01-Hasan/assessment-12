@@ -3,6 +3,10 @@
     margin-bottom: 8px;
 }
 
+.email-fild{
+    width: 558px;
+}
+
 
 .comment{
     width: 558px;
@@ -26,4 +30,14 @@
     font-family: monospace;
     color: #f909fd;
     font-weight: bolder;
+}
+
+.review-cmt{
+    color: #0c0c0c;
+    margin: 0px;
+    font-family: none;
+    font-size: 21px;
+    letter-spacing: 5px;
+    font-weight: 700;
+
 }

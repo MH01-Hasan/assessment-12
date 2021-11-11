@@ -1,0 +1,56 @@
+.f-icon{
+    font-size: 48px;
+    margin: 15px 8px;
+}
+
+.f-icon:hover{
+   
+    color: #0e75f5;
+}
+
+.footer-heading{
+    color: #302d2d;
+    font-size: 18px;
+    font-family: emoji;
+    letter-spacing: 6px;
+    font-weight: 700;
+    margin: 10px 5px;
+}
+
+.footer-div ul li{
+    font-size: 15px;
+    list-style: none;
+    font-family: none;
+    letter-spacing: 2px;
+    text-align: start;
+    margin: 11px;
+    font-weight: 700;
+
+}
+
+.text-fild{
+    color: #0e0d0de0;
+    font-family: -webkit-body;
+    font-size: 19px;
+
+}
+
+.sub-input{
+    width: 100%;
+    margin: 10px 0px;
+    height: 46px;
+
+}
+
+.sub-btn{
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border-radius: 4px;
+}
+
+
+.sub-btn:hover{
+    background-color: #930f7c;
+}
