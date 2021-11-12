@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import Allorder from '../Clientside/Allorder/Allorder';
 import Payment from '../Clientside/Payment/Payment';
@@ -12,7 +12,20 @@ import Admin from '../Clientside/Admin/Admin';
 
 const Dashbord = () => {
     let { path, url } = useRouteMatch();
-    const {logout} =UseAuth()
+    const {logout,user} =UseAuth()
+   const [isAdmi, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data[0]?.role === "admin") {
+          setIsAdmin(true);
+        } else {
+          setIsAdmin(false);
+        }
+      });
+  }, [user?.email]);
 
     const style={
         textDecoration:"none",
@@ -23,40 +36,54 @@ const Dashbord = () => {
             
             <div className='row '>
                 <div className='col-lg-2 col-sm-12 dashbord-list'>
-                      <Link style={style} to={`${url}`}>
-                      <li className="dashboard-menu mt-5 ">All Order</li>
-                    </Link>
+                      
 
-                      <Link style={style} to={`${url}/myOrder`}>
-                      <li className="dashboard-menu  "> MY-order</li>
-                    </Link>
+{
+  isAdmi ? <div>
+    <Link style={style} to={`${url}`}>
+      <li className="dashboard-menu mt-5 ">All Order</li>
+     </Link>
+     <Link style={style} to={`${url}/addproduct`}>
+        <li className="dashboard-menu "> Add Product</li>
+    </Link>
+    <Link style={style} to={`${url}/makeadmin`}>
+      <li className="dashboard-menu "> Make Admin</li>
+     </Link>
 
-                    <Link style={style} to={`${url}/review`}>
-                      <li className="dashboard-menu ">Review</li>
-                    </Link>
-                    <Link style={style} to={`${url}/payment`}>
-                    <li className="dashboard-menu "> Payment</li>
-                    </Link>
-                    <Link style={style} to={`${url}/addproduct`}>
-                    <li className="dashboard-menu "> Add Product</li>
-                    </Link>
-                    <Link style={style} to={`${url}/makeadmin`}>
-                    <li className="dashboard-menu "> Make Admin</li>
-                    </Link>
+
+
+  </div>
+:
+
+ <div>
+     <Link style={style} to={`${url}`}>
+        <li className="dashboard-menu  "> MY-order</li>
+      </Link>
+
+      <Link style={style} to={`${url}/review`}>
+           <li className="dashboard-menu ">Review</li>
+       </Link>
+         <Link style={style} to={`${url}/payment`}>
+          <li className="dashboard-menu "> Payment</li>
+         </Link>
+                   
+ </div>
+}
+                    
                     <li className="dashboard-menu "> <button className='log-out-btn' onClick ={logout}> <i class="fas fa-sign-out-alt"></i>log-Out</button></li>
 
              
 
-                </div>
+ </div>
 
                 <div className='col-lg-10 col-sm-12'>
                 <Switch>
-              <Route exact path={`${path}`}>
+             {isAdmi? <Route exact path={`${path}`}>
                 <Allorder></Allorder>
-              </Route>
-              <Route exact  path={`${path}/myOrder`}>
+              </Route>:
+              <Route exact  path={`${path}`}>
                 <Myorder></Myorder>
-              </Route>
+              </Route>}
               <Route  exact path={`${path}/review`}>
                <Revew></Revew>
               </Route>
@@ -75,7 +102,7 @@ const Dashbord = () => {
                 </div>
 
             </div>
-          
+        
         </div>
     );
 };

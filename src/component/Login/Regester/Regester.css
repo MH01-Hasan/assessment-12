@@ -7,23 +7,26 @@
 
  
 
-.regester-fild {
-    background-color: black;
-    width: 420px;
+.regester {
+    background-color: #e3b3b3;
+    width: 460px;
     margin: auto;
-    padding-top:  60px;
-    border: 1px solid rgb(39, 38, 38);
+    padding-top: 64px;
+    border: 1p solid rgb(39, 38, 38);
     border-radius: 14px;
 }
 
 
-.regester-fild input{
+.regester-fild{
     font-size: 18px;
     padding-left: 14px;
     font-family: monospace;
-    width: 314px;
+    width: 351px;
+    margin-left: 21px;
+    margin-top: 26px;
+    height: 54px;}
    
-}
+
 
 .reg-h{
     text-align: center;
@@ -32,4 +35,17 @@
 
 .pass{
     color: whitesmoke;
+}
+
+.reg-submit-btn{
+    background-color: coral;
+    padding: 9px 34px;
+    margin-top: 23px;
+    border: none;
+    border-radius: 5px;
+    color: azure;
+    margin-bottom: 44px;
+    margin-left: 22px;
+
+
 }

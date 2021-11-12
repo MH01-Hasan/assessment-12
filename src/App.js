@@ -17,6 +17,7 @@ import WatchProduct from './component/WatchProduct/WatchProduct';
 import Details from './component/Details/Details';
 import Banner from './component/Banner/Banner';
 import Home from './component/Home/Home';
+import Footer from './component/Footer/Footer';
 
 function App() {
   return (
@@ -47,10 +48,7 @@ function App() {
           <PrivateRoute path='/order/:id'>
           <Details></Details>
           </PrivateRoute>
-    
-         
         </Switch>
-     
     </Router>
     </AuthProvider>
      

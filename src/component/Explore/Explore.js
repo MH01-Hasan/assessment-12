@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import WatchData from '../WatchData/WatchData';
 import './Explore.css'
@@ -29,7 +30,7 @@ const Explore = () => {
                             ></WatchData>)
                             }
                 </div>
-
+               <Footer></Footer>
            </div>
            
           

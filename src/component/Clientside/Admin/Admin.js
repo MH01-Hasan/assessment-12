@@ -1,21 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
+import './Admin.css'
 
 
 const Admin = () => {
-    const [admin,setAdmin]=useState({})
-    console.log(admin)
-
-    useEffect(()=>{
-        fetch("http://localhost:5000/user")
-        .then(res =>res.json())
-        .then(data => setAdmin(data))
-    },[])
-
-
-
-    ///************ Swite Alearte set******************* */
+ ///************ Swite Alearte set******************* */
 
     const sweetalart = () =>{
         Swal.fire({
@@ -46,8 +36,9 @@ const Admin = () => {
 
     return (
         <div>
-      <h1>make admin</h1>
+      <h1 className='make-admin'>Make Admin</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
+          <p className='text-admin'>Please Email Address</p>
         <input
           className="input-field"
           name="email"
@@ -58,7 +49,7 @@ const Admin = () => {
         <br />
 
         <input
-          className="submit-btn btn btn-danger mt-3"
+          className="admin-submit-btn btn btn-danger mt-3"
           type="submit"
           value="make as Admin"
         />

@@ -14,6 +14,7 @@ const Home = () => {
             <About></About>
             <Comment></Comment>
             <Footer></Footer>
+        
             
         </div>
     );

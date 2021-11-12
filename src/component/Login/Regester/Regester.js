@@ -34,8 +34,9 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
   };
     
     return (
-        <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <div className=' regester mt-5'>
+          <h2 className='reg-h'>Please Regester</h2>
+        <form onSubmit={handleSubmit(onSubmit)} className='mb-5'>
           {/* <input
             className="input-field"
             name="displayName"
@@ -45,7 +46,7 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
           /> */}
           <br />
           <input
-            className="input-field"
+            className="regester-fild"
             name="email"
             placeholder="Email"
             type="email"
@@ -53,7 +54,7 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
           />
           <br />
           <input
-            className="input-field"
+            className="regester-fild"
             name="password"
             type="password"
             placeholder="Password"
@@ -62,7 +63,7 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
           <br />
   
           <input
-            className="submit-btn btn btn-danger mt-3"
+            className="reg-submit-btn btn btn-danger mt-3"
             type="submit"
             value="Register"
           />
