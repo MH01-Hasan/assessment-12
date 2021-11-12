@@ -7,6 +7,7 @@ import './Dashbord.css'
 import UseAuth from '../../hooks/UseAuth';
 import AddProduct from '../AddProduct/AddProduct';
 import Myorder from '../Clientside/Myorder/Myorder';
+import Admin from '../Clientside/Admin/Admin';
 
 
 const Dashbord = () => {
@@ -39,6 +40,9 @@ const Dashbord = () => {
                     <Link style={style} to={`${url}/addproduct`}>
                     <li className="dashboard-menu "> Add Product</li>
                     </Link>
+                    <Link style={style} to={`${url}/makeadmin`}>
+                    <li className="dashboard-menu "> Make Admin</li>
+                    </Link>
                     <li className="dashboard-menu "> <button className='log-out-btn' onClick ={logout}> <i class="fas fa-sign-out-alt"></i>log-Out</button></li>
 
              
@@ -61,6 +65,9 @@ const Dashbord = () => {
               </Route>
               <Route exact path={`${path}/addproduct`}>
               <AddProduct></AddProduct>
+              </Route>
+              <Route exact path={`${path}/makeadmin`}>
+                <Admin></Admin>
               </Route>
               
             </Switch>

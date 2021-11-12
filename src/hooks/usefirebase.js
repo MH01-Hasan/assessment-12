@@ -1,10 +1,11 @@
 
 import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
-    onAuthStateChanged, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+    onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
   
   import { useEffect } from "react";
   import { useState } from "react";
   import initialize from "../Firebase/firevaseInt";
+ 
   
   initialize()
   
@@ -20,8 +21,9 @@ import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
   const regester = (email,password) =>{
     setLodding(true);
    createUserWithEmailAndPassword (auth,email, password)
-    .then((userCredential) => {   
-      const user = userCredential.user;
+    .then((result) => {   
+      hanldeUser(result.user.email,);
+      const user = result.user;
       setUser(user)
       setErroe('');
       
@@ -35,7 +37,12 @@ import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
   }
      ///email and password creat register from ///////////////////////////////////
   //loginuser//
-  
+
+
+
+
+
+  //Login system  email and password////////
   const loginuser = (email ,password ,location,history)=>{
     setLodding(true);
     signInWithEmailAndPassword(auth, email, password)
@@ -51,10 +58,23 @@ import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
       const errorMessage = error.message;
     })
     .finally(() => setLodding(false));
-  
-
   }
-  //loginuser//
+  //Login system  email and password////////
+
+  /// user info send to data base///
+  const hanldeUser= (email) => {
+    fetch("http://localhost:5000/user", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email }),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+  };
+ 
+
+
+  /// user info send to data base///
     
       
   //1------------------- singin google  start------------------------------//
