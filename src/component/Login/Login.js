@@ -33,8 +33,6 @@ const handelonBlur =(e)=>{
     Newlogindata[field] = value
     setLogindata(Newlogindata)
 
-console.log(field ,value)
-
 }
 const handelloginSubmit = (e) =>{
    

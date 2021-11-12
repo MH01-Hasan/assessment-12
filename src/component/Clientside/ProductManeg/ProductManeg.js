@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import UseAuth from '../../../hooks/UseAuth'
 import './ProductManeg.css'
 import Swal from 'sweetalert2'
 
 const ProductManeg = () => {
-    const {user}= UseAuth()
+ 
 const [managesProduct ,setManagesProduct]=useState([])
 console.log(managesProduct)
 useEffect(()=>{

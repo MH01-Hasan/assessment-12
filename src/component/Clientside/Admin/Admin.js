@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React   from 'react';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
 import './Admin.css'
@@ -19,7 +19,7 @@ const Admin = () => {
     }
 ///************ Swite Alearte set******************* */
 
-    const { register, handleSubmit, reset, errors } = useForm();
+    const { register, handleSubmit, reset  } = useForm();
 
     const onSubmit = (data) => {
         fetch("http://localhost:5000/makeadmin", {
@@ -28,7 +28,9 @@ const Admin = () => {
           body: JSON.stringify(data),
         })
           .then((res) => res.json())
-          .then((result) => console.log(result));
+          .then((result) => {
+            
+          });
            sweetalart()
         reset()          
 

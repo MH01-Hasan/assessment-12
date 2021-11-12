@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './About.css'
-import abbg from '../../image/123.png'
+
 
 const About = () => {
     const style={

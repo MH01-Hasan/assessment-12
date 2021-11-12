@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 import './CommentData.css'
 import { FaStar } from 'react-icons/fa';
@@ -20,6 +20,7 @@ const CommentData = (props) => {
                 <div className='show-reating'>
                     <h6 className='rting'>Rating :-</h6>
                 {[...Array(5)].map((star,i)=>{
+            
                     const ratingvalue = i+1
                            return (
                               <div >

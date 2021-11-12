@@ -20,14 +20,6 @@ const Header = () => {
             };
 
 
-            //
-            // text-decoration: none;
-            // font-size: 22px;
-            // font-family: serif;
-            // margin-left: 16px;
-            // font-weight: 700;
-            // color: white;
-            //
 
     return (
         <Navbar className='header-fild mx-3' expand="lg">

@@ -11,7 +11,6 @@ import { useForm } from "react-hook-form";
 const Regester = () => {
   
     const{regester,user}= UseAuth()
-    console.log(user)
 ///swite alart ////
     const alert = () => {
         Swal.fire({
