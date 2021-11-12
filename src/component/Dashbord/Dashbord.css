@@ -1,9 +1,7 @@
 .dashbord-list{
-    border-right: 1px solid rgb(241, 131, 5);
-    /* border-top: 1px solid gray; */
-    height: 600px;
-    background-color: #066659;
-    padding-left: 5px;
+    height: 1463px;
+    background-color: #2D2F3E;
+    padding-left: 20px
 
     
 }
@@ -18,7 +16,7 @@
     font-size: 25px;
     margin-bottom: 14px;
     font-family: serif;
-    color: black;
+    color: whitesmoke;
 }
 
 .dashboard-menu:hover{
@@ -30,4 +28,19 @@
     color: #a907eb;
     border-radius: 6px;
     background-color: #f1f1f1;
+}
+
+.dash-user{
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+    font-size: 18px;
+    font-family: monospace;
+    flex-direction: column;
+}
+.user-icon{
+    color: #f2f2f2;
+    font-size: 76px;
 }

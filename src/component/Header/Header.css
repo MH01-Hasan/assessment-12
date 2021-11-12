@@ -1,4 +1,15 @@
 .header-fild{
-    background-color: #2d502b;
+    background-color: #303030;
     height: 144px;
+}
+
+
+
+.logout{
+    font-weight: 700;
+    margin: 0px 23px;
+    background-color: #12780b;
+    font-size: 17px;
+    letter-spacing: 1px;
+
 }

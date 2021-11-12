@@ -116,6 +116,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
       const logout = ()=>{
           signOut(auth)
           .then(() => {
+           
             setUser({})
             })
             .finally(()=>setLodding(false));

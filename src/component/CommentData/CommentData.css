@@ -1,3 +1,16 @@
 .icon{
     font-size: 28px;
 }
+.show-reating{
+    display: flex;
+    
+}
+
+.rting{
+    color: #282322;
+    display: flex;
+    margin-right: 10px;
+    font-family: monospace;
+    margin-top: 5px;
+    font-weight: bolder
+}

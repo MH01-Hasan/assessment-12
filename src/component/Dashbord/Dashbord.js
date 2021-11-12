@@ -8,6 +8,7 @@ import UseAuth from '../../hooks/UseAuth';
 import AddProduct from '../AddProduct/AddProduct';
 import Myorder from '../Clientside/Myorder/Myorder';
 import Admin from '../Clientside/Admin/Admin';
+import ProductManeg from '../Clientside/ProductManeg/ProductManeg';
 
 
 const Dashbord = () => {
@@ -35,48 +36,50 @@ const Dashbord = () => {
         <div className='dashbord-fild ' >
             
             <div className='row '>
-                <div className='col-lg-2 col-sm-12 dashbord-list'>
+             
+                <div className='col-lg-3 col-sm-12 dashbord-list'>
+                <li className='dash-user'><i class="fas fa-user-circle user-icon"></i> {user?.email}</li>
                       
 
-{
-  isAdmi ? <div>
-    <Link style={style} to={`${url}`}>
-      <li className="dashboard-menu mt-5 ">All Order</li>
-     </Link>
-     <Link style={style} to={`${url}/addproduct`}>
-        <li className="dashboard-menu "> Add Product</li>
-    </Link>
-    <Link style={style} to={`${url}/makeadmin`}>
-      <li className="dashboard-menu "> Make Admin</li>
-     </Link>
+              {
+                isAdmi ? <div>
+                  <Link style={style} to={`${url}`}>
+                    <li className="dashboard-menu mt-5 ">All Order</li>
+                  </Link>
+                  <Link style={style} to={`${url}/addproduct`}>
+                      <li className="dashboard-menu "> Add Product</li>
+                  </Link>
+                  <Link style={style} to={`${url}/makeadmin`}>
+                    <li className="dashboard-menu "> Make Admin</li>
+                  </Link>
+                  <Link style={style} to={`${url}/manegeProduct`}>
+                    <li className="dashboard-menu "> Manege Product</li>
+                  </Link>
 
 
 
-  </div>
-:
+                </div>
+              :
 
- <div>
-     <Link style={style} to={`${url}`}>
-        <li className="dashboard-menu  "> MY-order</li>
-      </Link>
+              <div>
+                  <Link style={style} to={`${url}`}>
+                      <li className="dashboard-menu  "> MY-order</li>
+                    </Link>
 
-      <Link style={style} to={`${url}/review`}>
-           <li className="dashboard-menu ">Review</li>
-       </Link>
-         <Link style={style} to={`${url}/payment`}>
-          <li className="dashboard-menu "> Payment</li>
-         </Link>
-                   
- </div>
-}
+                    <Link style={style} to={`${url}/review`}>
+                        <li className="dashboard-menu ">Review</li>
+                    </Link>
+                      <Link style={style} to={`${url}/payment`}>
+                        <li className="dashboard-menu "> Payment</li>
+                      </Link>
+                                
+              </div>
+              }
                     
-                    <li className="dashboard-menu "> <button className='log-out-btn' onClick ={logout}> <i class="fas fa-sign-out-alt"></i>log-Out</button></li>
+             <li className="dashboard-menu "> <button className='log-out-btn' onClick ={logout}> <i class="fas fa-sign-out-alt"></i>log-Out</button></li> 
+               </div>
 
-             
-
- </div>
-
-                <div className='col-lg-10 col-sm-12'>
+                <div className='col-lg-9 col-sm-12'>
                 <Switch>
              {isAdmi? <Route exact path={`${path}`}>
                 <Allorder></Allorder>
@@ -95,6 +98,9 @@ const Dashbord = () => {
               </Route>
               <Route exact path={`${path}/makeadmin`}>
                 <Admin></Admin>
+              </Route>
+              <Route exact path={`${path}/manegeProduct`}>
+                <ProductManeg></ProductManeg>
               </Route>
               
             </Switch>

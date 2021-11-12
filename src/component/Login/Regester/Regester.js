@@ -35,15 +35,9 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
     
     return (
         <div className=' regester mt-5'>
-          <h2 className='reg-h'>Please Regester</h2>
+          <h2 className='reg-h'>Please Register</h2>
         <form onSubmit={handleSubmit(onSubmit)} className='mb-5'>
-          {/* <input
-            className="input-field"
-            name="displayName"
-            placeholder="name"
-            type="text"
-            {...register("displayName", { required: true })}
-          /> */}
+         
           <br />
           <input
             className="regester-fild"

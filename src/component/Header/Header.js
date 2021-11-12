@@ -13,11 +13,22 @@ const Header = () => {
         textDecoration:"none",
         fontSize: "22px",
         fontFamily: "serif",
-        marginLeft: "15px",
-        fontWeight: "700",
+        marginLeft: "16px",
+        fontWeight: "600",
         color:' white'
         
             };
+
+
+            //
+            // text-decoration: none;
+            // font-size: 22px;
+            // font-family: serif;
+            // margin-left: 16px;
+            // font-weight: 700;
+            // color: white;
+            //
+
     return (
         <Navbar className='header-fild mx-3' expand="lg">
         <Container>
@@ -30,7 +41,7 @@ const Header = () => {
              {user?.email && <NavLink to='/dashbord'style={style}>Dashbord</NavLink>}
 
              {!user?.email ?<NavLink to='/login'style={style}>Login </NavLink>:
-                                <Button  className='logout-btn' onClick ={logout}>Log out</Button>}
+             <Button  className='logout' onClick ={logout}>Log out</Button>}
                              
                              
             </Navbar.Text>
