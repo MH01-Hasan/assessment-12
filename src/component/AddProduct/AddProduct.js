@@ -17,7 +17,7 @@ const AddProduct = () => {
 
     }
   const onSubmit = data => {
-    axios.post('http://localhost:5000/Product',data)
+    axios.post('https://stormy-meadow-32930.herokuapp.com/Product',data)
     .then(res => {
         if(res.data.insertedId){
             alert()

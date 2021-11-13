@@ -15,6 +15,7 @@ import Regester from './component/Login/Regester/Regester';
 import PrivateRoute from './component/Login/PrivateRoute/PrivateRoute';
 import Details from './component/Details/Details';
 import Home from './component/Home/Home';
+import Error from './component/Error/Error';
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
           </PrivateRoute>
 
           <Route path="*">
-          
+          <Error></Error>
           </Route>
 
         </Switch>

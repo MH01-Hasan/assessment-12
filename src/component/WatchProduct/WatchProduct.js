@@ -7,7 +7,7 @@ const WatchProduct = () => {
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/Product')
+        fetch('https://stormy-meadow-32930.herokuapp.com/Product')
         .then(res => res.json())
         .then(data => setWatch(data))
       

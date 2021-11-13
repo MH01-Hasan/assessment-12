@@ -14,7 +14,7 @@ const Details = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/Product/${id}`)
+        fetch(`https://stormy-meadow-32930.herokuapp.com/Product/${id}`)
         .then(res => res.json())
         .then(data => setData(data))
     },[])
@@ -34,7 +34,7 @@ const Details = () => {
 
     const { register, handleSubmit,reset, formState: { errors },} = useForm();
       const onSubmit = data => {
-        axios.post('http://localhost:5000/order',data)
+        axios.post('https://stormy-meadow-32930.herokuapp.com/order',data)
         .then(res => {
             if(res.data.insertedId){
                 sweetalart()

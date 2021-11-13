@@ -73,10 +73,11 @@ const handelloginSubmit = (e) =>{
 
                  <div className='or'>---------------- Or login with ----------------</div>
                  <div className='other-signin'>
-                     <NavLink to ='/regester'>Register </NavLink>
+                   
                  
                  <Button onClick={hamdelgoogle} className='singin-g'> <i className="fab fa-google google-icon"></i>Google</Button>
-
+                 <br />
+                 <NavLink to ='/regester' className='New-User'> New User ? please Register </NavLink>
                  </div>
                 
                 

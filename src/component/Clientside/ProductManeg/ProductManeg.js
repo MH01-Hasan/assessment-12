@@ -8,7 +8,7 @@ const ProductManeg = () => {
 const [managesProduct ,setManagesProduct]=useState([])
 console.log(managesProduct)
 useEffect(()=>{
-    fetch('http://localhost:5000/Product')
+    fetch('https://stormy-meadow-32930.herokuapp.com/Product')
     .then(res => res.json())
     .then(data =>setManagesProduct(data))
 },[]);
@@ -32,7 +32,7 @@ const switealart =()=>{
 const handeldelet = (id)=>{
     const prosid =window.confirm('are you sure delete')
   if(prosid){
-    const url = `http://localhost:5000/Product/${id}`
+    const url = `https://stormy-meadow-32930.herokuapp.com/Product/${id}`
   
   fetch(url,{
     method:'DELETE'

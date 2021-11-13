@@ -33,7 +33,7 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
   };
     
     return (
-        <div className=' regester mt-5'>
+        <div className=' regester mt-5 mb-5'>
           <h2 className='reg-h'>Please Register</h2>
         <form onSubmit={handleSubmit(onSubmit)} className='mb-5'>
          
@@ -60,12 +60,17 @@ const { register, handleSubmit, reset  , formState: { errors } } = useForm();
             type="submit"
             value="Register"
           />
+          <br />
+          <NavLink to ='/login' className="already">Already register ? Login please</NavLink> 
         </form>
        {user?.email && <div>
          {alert()}
          </div>
              } 
+
+        
       </div>
+    
     
     );
 };

@@ -39,8 +39,9 @@
     font-size: 18px;
     font-family: monospace;
     flex-direction: column;
+    margin-bottom: 28px;
 }
 .user-icon{
     color: #f2f2f2;
-    font-size: 76px;
+    font-size: 47px;
 }

@@ -11,7 +11,7 @@ const Allorder = () => {
 
     //All order data Load///
   useEffect(() => {
-    fetch('http://localhost:5000/order')
+    fetch('https://stormy-meadow-32930.herokuapp.com/order')
       .then((res) => res.json())
 
       .then((data) => setOrders(data));
@@ -35,7 +35,7 @@ const switealart =()=>{
 const handeldelet = (id)=>{
   const prosid =window.confirm('are you sure delete')
 if(prosid){
-  const url = `http://localhost:5000/order/${id}`
+  const url = `https://stormy-meadow-32930.herokuapp.com/order/${id}`
 
 fetch(url,{
   method:'DELETE'

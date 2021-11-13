@@ -63,7 +63,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
 
   /// user info send to data base///
   const hanldeUser= (email) => {
-    fetch("http://localhost:5000/user", {
+    fetch("https://stormy-meadow-32930.herokuapp.com/user", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),
