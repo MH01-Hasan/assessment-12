@@ -14,8 +14,6 @@ const About = () => {
         color: "#060000",
         backgroundColor: "white",
         marginLeft: "39px",
-
-
         
             };
     return (
